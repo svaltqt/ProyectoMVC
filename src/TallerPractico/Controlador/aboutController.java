@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class aboutController {
+package TallerPractico.Controlador;
+
+public class aboutController {
+
 }
