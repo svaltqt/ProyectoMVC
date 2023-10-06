@@ -38,7 +38,7 @@ public class LoginController {
             if (valores.length >= 2) {
                 UserAuth = valores[0].trim();
                 passAuth = valores[1].trim();
-                System.out.println(valores);
+
 
                 if (user.equals(UserAuth) && password.equals(passAuth)) {
 

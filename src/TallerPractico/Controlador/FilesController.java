@@ -21,9 +21,7 @@ public class FilesController {
             e.printStackTrace();
         }
     }
-
     public ArrayList<String> consultarRegistros(String archivo) {
-
         try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
             String linea;
             while ((linea = reader.readLine()) != null) {
@@ -31,7 +29,6 @@ public class FilesController {
             }
         } catch (IOException e) {
             e.printStackTrace();
-
         }
         return users;
     }
@@ -46,8 +43,6 @@ public class FilesController {
                 }
             }
             reader.close();
-
-
             BufferedWriter writer = new BufferedWriter(new FileWriter(archivo, true));
             for (String l : lineas){
                 writer.write(l);

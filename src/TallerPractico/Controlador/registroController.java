@@ -2,6 +2,7 @@
 
     import TallerPractico.Modelo.Persona;
     import javafx.event.ActionEvent;
+    import javafx.scene.control.Alert;
     import javafx.scene.control.Button;
     import javafx.scene.control.TextField;
 
@@ -20,5 +21,16 @@
             String archivo = "src/TallerPractico/Modelo/Users.txt";
             filesController.AgregarRegistro(archivo, registro);
 
+            mensaje("Registro Completo","Enhorabuena se ha registrado con éxito");
+        }
+        public void autentificador(){}
+
+        public void mensaje(String title, String body){
+
+            Alert popAlerta = new Alert(Alert.AlertType.INFORMATION);
+            popAlerta.setTitle(title);
+            popAlerta.setHeaderText("");
+            popAlerta.setContentText(body);
+            popAlerta.showAndWait();
         }
     }

@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fc31106-757d-4007-ba42-c277b9fffa14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5fc31106-757d-4007-ba42-c277b9fffa14" name="Changes" comment="Update registroController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parcial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Parcial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TallerPractico/Controlador/FilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Controlador/FilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Controlador/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Controlador/InicioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TallerPractico/Controlador/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Controlador/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Controlador/aboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Controlador/aboutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TallerPractico/Controlador/registroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Controlador/registroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Modelo/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Vista/About.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Vista/About.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Vista/Inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Vista/Inicio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Vista/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Vista/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Vista/Registro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Vista/Registro.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TallerPractico/Modelo/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TallerPractico/Modelo/Users.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +25,16 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -108,10 +106,23 @@
       <workItem from="1696554189392" duration="10466000" />
       <workItem from="1696600777457" duration="9419000" />
     </task>
+    <task id="LOCAL-00001" summary="Update registroController">
+      <option name="closed" value="true" />
+      <created>1696630907082</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696630907082</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update registroController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update registroController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
