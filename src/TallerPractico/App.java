@@ -17,7 +17,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Vista/Login.fxml")));
         primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 317, 423));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 

@@ -20,9 +20,12 @@ public class InicioController {
     Stage aboutWindow = new Stage();
 
     public void clickAbout(ActionEvent actionEvent) {
+        llamarVentana("/TallerPractico/Vista/About.fxml","About");
+    }
+    public void llamarVentana(String ruta, String title){
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/TallerPractico/Vista/About.fxml")));
-            aboutWindow.setTitle("About");
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(ruta)));
+            aboutWindow.setTitle(title);
             aboutWindow.setScene(new Scene(root, 467, 509));
             aboutWindow.show();
         } catch (IOException e) {

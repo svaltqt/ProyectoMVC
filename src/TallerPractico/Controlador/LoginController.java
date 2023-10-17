@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -20,17 +21,13 @@ public class LoginController {
     public TextField txtUser;
     public PasswordField txtPassword;
     String user, UserAuth, password, passAuth;
-    Stage principalWindow = new Stage();
-    Stage registroWindows = new Stage();
+    Stage summonWindows = new Stage();
     FilesController filesController = new FilesController();
     String archivo = "src/TallerPractico/Modelo/Users.txt";
-
-
-
-
-    public void clickEntrar(ActionEvent actionEvent){
+    public void clickEntrar(ActionEvent actionEvent) {
         this.user = txtUser.getText();
         this.password = txtPassword.getText();
+        boolean loginExitoso = false;
 
         ArrayList<String> datos = filesController.consultarRegistros(archivo);
         for (String cadena : datos) {
@@ -39,45 +36,40 @@ public class LoginController {
                 UserAuth = valores[0].trim();
                 passAuth = valores[1].trim();
 
-
                 if (user.equals(UserAuth) && password.equals(passAuth)) {
-
-                    Alert popAlerta = new Alert(Alert.AlertType.INFORMATION);
-                    popAlerta.setTitle("Login Confirmado");
-                    popAlerta.setHeaderText("");
-                    popAlerta.setContentText("Bienvenido a la mejor vet de todas");
-                    popAlerta.showAndWait();
-
-                    // Abriendo la Ventana Principal
-
-                    try {
-                        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/TallerPractico/Vista/Inicio.fxml")));
-                        principalWindow.setTitle("Principal");
-                        principalWindow.setScene(new Scene(root, 317, 423));
-                        principalWindow.show();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                } else {
-                    Alert popAlerta = new Alert(Alert.AlertType.INFORMATION);
-                    popAlerta.setTitle("Login Erroneo");
-                    popAlerta.setHeaderText("");
-                    popAlerta.setContentText("Por favor verifique la información");
-                    popAlerta.showAndWait();
+                    loginExitoso = true;
+                    break;
                 }
-
-
             }
+        }
+
+        if (loginExitoso) {
+            mensaje("Login Confirmado", "Es un placer tenerte de vuelta");
+            llamarVentana("/TallerPractico/Vista/Inicio.fxml", "Principal");
+        } else {
+            mensaje("Login Erroneo", "Por favor verifique la información");
         }
     }
 
     public void clickRegistro(ActionEvent actionEvent) {
+        llamarVentana("/TallerPractico/Vista/Registro.fxml","Registro");
+    }
+    public void mensaje(String title, String body){
 
+        Alert popAlerta = new Alert(Alert.AlertType.INFORMATION);
+        popAlerta.setTitle(title);
+        popAlerta.setHeaderText("");
+        popAlerta.setContentText(body);
+        popAlerta.showAndWait();
+    }
+    public void llamarVentana(String ruta, String title){
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/TallerPractico/Vista/Registro.fxml")));
-            registroWindows.setTitle("Registro");
-            registroWindows.setScene(new Scene(root, 317, 423));
-            registroWindows.show();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(ruta)));
+            summonWindows.setTitle(title);
+            summonWindows.setScene(new Scene(root));
+
+
+            summonWindows.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

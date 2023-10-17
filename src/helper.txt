@@ -1,3 +1,4 @@
+Script Necesario para que Funciona el Compilador, este debe ir en la VM del Compilador y la ruta asignada debe la del JavaFX
 --module-path
 ${PATH_TO_FX}
 --add-modules
